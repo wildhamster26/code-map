@@ -52,16 +52,16 @@ export default {
       .get('/logout')
   },
 
-  getCountries() {
+  getMaterials() {
     return service
-      .get('/countries')
+      .get('/materials')
       .then(res => res.data)
       .catch(errHandler)
   },
 
-  postCountries(data) {
+  postMaterials(data) {
     return service
-      .post('/countries', data)
+      .post('/materials', data)
       .then(res => res.data)
       .catch(errHandler)
   },
