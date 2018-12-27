@@ -11,8 +11,9 @@ class AddMaterial extends Component {
       area: "",
       description: "",
       techs: "",
+      field: "",
       time: "",
-      creationDate: "",
+      materialCreationDate: "",
       message: null
     }
   }
@@ -33,8 +34,9 @@ class AddMaterial extends Component {
       type: this.state.type,
       description: this.state.description,
       techs: this.state.techs,
+      field: this.state.field,
       time: this.state.time,
-      creationDate: this.state.creationDate,
+      materialCreationDate: this.state.materialCreationDate,
     }
     api.postMaterials(data)
       .then(result => {
@@ -45,8 +47,9 @@ class AddMaterial extends Component {
           type: "",
           description: "",
           techs: "",
+          field: "",
           time: "",
-          creationDate: "",
+          materialCreationDate: "",
           message: `Your material '${this.state.name}' has been created`
         })
         setTimeout(() => {
@@ -67,8 +70,9 @@ class AddMaterial extends Component {
           Type: <input type="text" value={this.state.type} onChange={(e) => { this.handleInputChange("type", e) }} /> <br />
           TL;DR: <textarea value={this.state.description} cols="30" rows="10" onChange={(e) => { this.handleInputChange("description", e) }} ></textarea> <br />
           Techs: <input type="text" value={this.state.techs} onChange={(e) => { this.handleInputChange("techs", e) }} /> <br />
+          Field: <input type="text" value={this.state.field} onChange={(e) => { this.handleInputChange("field", e) }} /> <br />
           Time: <input type="text" value={this.state.time} onChange={(e) => { this.handleInputChange("time", e) }} /> <br />
-          Material Creation date: <input type="text" value={this.state.creationDate} onChange={(e) => { this.handleInputChange("creationDate", e) }} /> <br />
+          Material Creation date: <input type="text" value={this.state.materialCreationDate} onChange={(e) => { this.handleInputChange("materialCreationDate", e) }} /> <br />
           <button onClick={(e) => this.handleClick(e)}>Create material</button>
         </form>
         {this.state.message && <div className="info">

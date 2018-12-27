@@ -7,7 +7,6 @@ import Secret from './pages/Secret';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
-import logo from '../logo.svg';
 
 class App extends Component {
   constructor(props) {
